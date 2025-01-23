@@ -10,9 +10,9 @@
     <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Content</th>
+                <th>City ID</th>
+                <th>City Name</th>
+                <th>State</th>
             </tr>
         </thead>
         <tbody>
