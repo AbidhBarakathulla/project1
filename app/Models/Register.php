@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Register extends Model
 {
     use HasFactory;
-
-    protected $table = 'all_cities';
-    
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['name', 'email','image'];  // Adjust the fields based on your form
 }

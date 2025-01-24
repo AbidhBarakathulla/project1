@@ -3,9 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Response;
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
+use App\Models\Register;
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/insert', [RegisterController::class, 'insertform'])->name('insert.form'); // Show the form
+Route::post('/insert', [RegisterController::class, 'insert'])->name('insert.submit'); 
+Route::get('/showtable', [RegisterController::class, 'index'])->name('showtable'); 
+Route::get('view/{register}/edit', [RegisterController::class, 'edit'])->name('edit');
+Route::put('view/{register}/edit', [RegisterController::class, 'update'])->name('update');
+Route::delete('/view/{register}/showtable', [RegisterController::class ,'destroy'])->name('destroy');
+
 
 // Route::get('/', function () {
 //     return view('student');
